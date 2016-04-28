@@ -80,7 +80,7 @@
           if (template) {
             template.splice("items", e.newIndex, 0, template.items.splice(e.oldIndex, 1)[0]);
           }
-          this.fire("update", e)
+          //this.fire("update", e)
         },
 
         onAdd: e => {
@@ -90,34 +90,34 @@
             var item = from.items[e.oldIndex]
             template.splice("items", e.newIndex, 0, item)
           }
-          this.fire("add", e)
+          //this.fire("add", e)
         },
 
         onRemove: e => {
           if (template) {
             template.splice("items", e.oldIndex, 1)[0]
           }
-          this.fire("remove", e)
+          //this.fire("remove", e)
         },
 
         onStart: e => {
-          this.fire("start", e)
+          //this.fire("start", e)
         },
 
         onEnd: e => {
-          this.fire("end", e)
+          //this.fire("end", e)
         },
 
         onSort: e => {
-          this.fire("sort", e)
+          //this.fire("sort", e)
         },
 
         onFilter: e => {
-          this.fire("filter", e)
+          //this.fire("filter", e)
         },
 
         onMove: e => {
-          this.fire("move", e)
+          //this.fire("move", e)
         }
       }))
 

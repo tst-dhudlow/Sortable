@@ -77,7 +77,7 @@
 
       this.sortable = Sortable.create(this, Object.assign(options, {
         onUpdate: e => {
-          if (template) {
+          if (template && !e.cancelBubble) {
             template.splice("items", e.newIndex, 0, template.items.splice(e.oldIndex, 1)[0]);
           }
           //this.fire("update", e)
